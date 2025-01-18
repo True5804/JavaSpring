@@ -1,4 +1,4 @@
-CREATE DATABASE demo0;
+CREATE DATABASE demo;
 CREATE TABLE Product(
 	code char(3) PRIMARY KEY,
 	barcode_num bigint,
@@ -22,8 +22,6 @@ CREATE TABLE Vehicle (
 	modified_date timestamp
 );
 
-ALTER TABLE Maintenance
-ALTER COLUMN order_num TYPE char(12);
 CREATE TABLE Maintenance (
 	order_num char(12) PRIMARY KEY,
 	licensePlate varchar(7) REFERENCES Vehicle (licensePlate),
